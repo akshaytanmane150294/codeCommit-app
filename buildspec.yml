@@ -19,5 +19,3 @@ phases:
 artifacts:
   files:
     - "**/*"
-  discard-paths: yes # Flatten directory structure
-  name: build-specs-folder/build-output.zip
