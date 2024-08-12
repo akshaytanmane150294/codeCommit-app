@@ -19,9 +19,7 @@
 # artifacts:
 #   files:
 #     - "**/*"
-
 version: 0.2
-
 phases:
   install:
     commands:
@@ -36,12 +34,12 @@ phases:
     commands:
       - echo Configuring NGINX
       - echo Creating ZIP file
-      - zip -r build-output.zip "**/*" # Create a ZIP file of the directory
+      - zip -r buildspec-output.zip /var/www/html/ # Create a ZIP file of the directory
 
 artifacts:
   files:
-    - build-output.zip # Specify the ZIP file as the artifact
+    - buildspec-output.zip # Specify the ZIP file as the artifact
   discard-paths: yes # Flatten directory structure
   base-directory: . # Base directory where the ZIP file is located
-  name: build-output.zip # Name of the ZIP file in S3 with folder path
+  name: buildspec-output.zip # Name of the ZIP file in S3 with folder path
   override-artifact-name: true # Ensure the artifact name is exactly as specified
