@@ -11,3 +11,14 @@ dpkg-deb -b codedeploy-agent_1.3.2-1902_ubuntu22/
 sudo dpkg -i codedeploy-agent_1.3.2-1902_ubuntu22.deb
 systemctl list-units --type=service | grep codedeploy
 sudo service codedeploy-agent status
+
+
+# sudo apt --fix-broken install
+# sudo apt-get update
+# sudo apt-get install -y ruby3.0
+# cd /home/ubuntu
+# wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install
+# chmod +x ./install
+# sudo ./install auto
+# sudo service codedeploy-agent start
+# sudo systemctl status codedeploy-agent
