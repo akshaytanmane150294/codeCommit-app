@@ -34,7 +34,7 @@ phases:
     commands:
       - echo Configuring NGINX
       - echo Creating ZIP file
-      - zip -r build-output.zip ./* # Create a ZIP file of the directory
+      - zip -r buildspec-output.zip ./* # Create a ZIP file of the directory
 
 artifacts:
   files:
